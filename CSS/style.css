@@ -1,0 +1,188 @@
+/* Inline elements :- 
+these elements take up only the space required and not the entire horizontal space
+
+Common Block elements :- 
+these elements take up the entire horizontal space
+
+Static :- Go along with the default html rules of positioning
+
+Relative positioning :- 
+Allows to position of an element relative to the static(default) position of the element.
+When a particular element is positioned using relative positioning, 
+it doesn't move other elements around(while using coordinate property). 
+
+Absolute Positioning :- The element is positioned relative to its PARENT element.
+By default the parent for any website is the original screen(body). 
+However the parent can be any element (like div) within which a particular element is present.
+
+Fixed Positioning :- 
+The element is fixed to a particular location on the screen and remains on the screen even after scrolling*/
+
+/* NOTE: 16px = 100% = 1em */
+/* While using % or em, the value of font size is inherited. For example, when use 2em in h1 tag, 
+its value is ,2em the size, of the fontsize in the body tag. 
+
+rem - root em - It ignores all the parent settings of the font-size(i.e, it doesn't inherit from parent containers)
+but takes the value relative to the root*/
+
+/* Preferably use rem instead of em or %, as it is safer */
+
+/*When you want to float and wrap only a part of the text around the img and leave the remaining text below the image, 
+it is called CLEAR. */
+
+/* Floating - Move the location of a text within a div and make the text wrap around another element(img) */
+
+div{
+    background-color: #ffffff;
+}
+p{
+    line-height: 2;
+}
+body{
+    margin:0px; /*There is some default css used by browser due to which there is a default margin for the body*/
+    text-align: center; /*It will align any element within the parent which isn't a block element*/
+    font-family: 'Merriweather', serif;
+    color: #40514E;
+} 
+h1{
+    margin: 50px auto 0 auto; /*If you have to align block elements, u must use width and margin*/
+    width:50%;
+    font-family: 'Sacramento', cursive;
+    font-size: 100px; /*When a user tries to change font size of browser in settings, texts with font-size set, don't change*/ 
+    /* To make font-size dynamic, use %  or you can use 'em' */
+    color: #66BFBF;
+
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    color: #66BFBF;
+    padding-bottom: 10px;
+}
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+a{
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+a:hover{
+    color: #EAF6F6;
+}
+hr{
+    margin:100px auto;
+    border: dotted #EAF6F6 6px;
+    border-bottom: none;
+    width: 5rem;
+    
+}
+#top{
+    background-color: #d8f7f4;
+    position: relative;
+    padding-top:70px;
+    
+}
+#mid{
+    margin:100px 0px;
+    
+}
+#bottom{
+    background-color: #66bfbf;
+    padding: 50px 0 20px;
+    
+}
+.intro{
+    width:30%;
+    margin:0 auto;
+
+}
+.programmer{
+    font-weight: normal;
+    line-height: 2;
+}
+.pro{
+    text-decoration: underline;
+}
+.btm-cloud{
+    position: absolute;
+    left: 18.75rem; /*300px*/
+    bottom: 28.125rem; /*450px*/
+ 
+}
+.top-cloud{
+    position: absolute;
+    right: 18.75rem; /*300px*/
+    top: 3.125rem;/*50px*/
+}
+.circular{
+    border-radius: 100%;
+    width: 200px;
+    padding: 5px;   
+}
+.crop{
+    width:195px; /*width and height of div */
+    height:195px;
+    background:url('https://media1.giphy.com/media/eh6nj0RNaZ5OGC8VBK/200w.webp?cid=ecf05e47h0renwl2ihqtj89ndh195oxj9m9xzsrc69q5064l&rid=200w.webp&ct=s');
+    background-size: 500px 500px; /* We are zooming into the gif,which is within the div, as its too small */
+    background-position-x: -150px; /* positioning the gif within the container to make it completely visible */
+    background-position-y: -150px;
+    /* margin: 0 auto; center the div */
+    margin-right: 30px;
+    float: left;
+}
+/* .prog-content{
+    clear:left;
+} */
+.pub{
+    width:25%;
+    margin-left: 30px;
+    float: right;
+}
+/* .pub-content{
+    clear: right;
+} */
+.skill-row{
+    width: 50%; /* width of div to 50 % of screen. */
+    text-align: left;
+    margin: 100px auto; /* centering */
+    line-height: 2;
+}
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+.btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+ .contact-me{
+     width:40%;
+     margin: 40px auto 60px;
+ }
+ .copyright{
+     color:#EAF6F6;
+     font-size: 0.75rem;
+     padding:20px 0px;
+ }
+
